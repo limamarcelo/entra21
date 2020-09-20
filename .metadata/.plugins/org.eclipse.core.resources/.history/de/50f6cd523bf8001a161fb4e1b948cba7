@@ -1,0 +1,78 @@
+package entities;
+
+public class Trapezio implements FiguraGeometrica {
+
+	private double area;
+	private double baseMaior;
+	private double baseMenor;
+	private double altura;
+	private double lado1;
+	private double lado2;
+	private double perimetro;
+
+	public Trapezio(double area, double baseMaior, double baseMenor, double lado1, double lado2, double altura) {
+		setArea(area);
+		setBaseMaior(baseMaior);
+		setBaseMenor(baseMenor);
+		setAltura(altura);
+		setLado1(lado1);
+		setLado2(lado2);
+	}
+
+	public void setArea(double area) {
+		this.area = area;
+	}
+
+	public double getArea() {
+		return area;
+	}
+
+	public void setBaseMaior(double baseMaior) {
+		this.baseMaior = baseMaior;
+	}
+
+	public double getBaseMaior() {
+		return baseMaior;
+	}
+
+	public void setBaseMenor(double baseMenor) {
+		this.baseMenor = baseMenor;
+	}
+
+	public double getBaseMenor() {
+		return baseMenor;
+	}
+
+	public void setAltura(double altura) {
+		this.altura = altura;
+	}
+	
+	public double getAltura() {
+		return altura;
+	}
+	
+	public void setLado1(double lado1) {
+		this.lado1 = lado1;
+	}
+
+	public double getLado1() {
+		return lado1;
+	}
+
+	public void setLado2(double lado2) {
+		this.lado2 = lado2;
+	}
+
+	public double getLado2() {
+		return lado2;
+	}
+
+	public double calcularArea(double baseMaior, double baseMenor, double altura) {
+		return area = (baseMaior + baseMenor) / 2 * altura;
+	}
+
+	public double calcularPerimetro(double baseMaior, double baseMenor, double altura) {
+		return perimetro = baseMaior + baseMenor + lado1 + lado2;
+	}
+
+}

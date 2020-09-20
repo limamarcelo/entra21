@@ -1,0 +1,21 @@
+package entities;
+
+public class Triangulo implements FiguraGeometrica{
+
+	private double base;
+	private double altura;
+	
+	public Triangulo(double base, double altura) {
+		setBase();
+		setAltura();
+	}
+	
+	public void setBase(double base) {
+		this.base = base;
+	}
+	
+	public double getBase() {
+		return base;
+	}
+	
+}

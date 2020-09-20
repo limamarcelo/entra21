@@ -1,0 +1,16 @@
+package entities;
+
+public class Paralelograma extends Retangulo{
+	
+	public Paralelograma(double base, double altura) {
+		super(base, altura);
+	}
+	
+	public double calcularArea() {
+		return getLadoA() * getLadoB();
+	}
+	
+	public double calcularPerimetro() {
+		return 2 * (getLadoA() + getLadoB());
+	}
+}

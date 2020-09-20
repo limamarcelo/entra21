@@ -1,0 +1,14 @@
+package entities;
+
+public class Retangulo implements FiguraGeometrica {
+	
+	private double base;
+	private double altura;
+	
+	public Retangulo(double base, double altura) {
+		setBase(base);
+		setAltura(altura);
+	}
+	
+
+}

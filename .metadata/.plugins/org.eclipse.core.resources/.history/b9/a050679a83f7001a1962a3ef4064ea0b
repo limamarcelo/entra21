@@ -1,0 +1,19 @@
+package entities;
+
+public class Circulo implements FiguraGeometrica{
+
+	private double raio;
+	
+	public Circulo(double raio) {
+		setArea(raio);
+	}
+	
+	public void setArea(double raio) {
+		calcularArea(raio);
+	}
+	
+	public double getArea() {
+		raio();
+	}
+	
+}

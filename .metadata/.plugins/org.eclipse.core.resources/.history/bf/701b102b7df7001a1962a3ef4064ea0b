@@ -1,0 +1,15 @@
+package entities;
+
+public class Quadrado implements FiguraGeometrica{
+
+	private double lado;
+	
+	public double calcularArea() {
+		return this.lado = lado * lado;
+	}
+	
+	public double calcularPerimetro(double lado) {
+		return this.lado = lado * 4;
+	}
+		
+}

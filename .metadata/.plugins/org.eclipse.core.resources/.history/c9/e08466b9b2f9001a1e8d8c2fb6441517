@@ -1,0 +1,12 @@
+package entities;
+class Alunos{
+ 
+ String nome;
+ int idade;
+ int nota [];
+ 
+ public void confirmarPresenca(){
+ System.out.println("O aluno " + nome + " está presente!");
+ }
+ 
+}

@@ -1,0 +1,10 @@
+package entities;
+
+public class Paralelograma {
+
+	
+	
+	public calcularArea() {
+		return 2 * (base + altura);
+	}
+}

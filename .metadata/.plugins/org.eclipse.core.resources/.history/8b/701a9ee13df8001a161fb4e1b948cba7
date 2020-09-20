@@ -1,0 +1,21 @@
+package entities;
+
+public class Paralelograma implements FiguraGeometrica{
+
+	private double base;
+	private double altura;
+	
+	public Paralelograma(double base, double altura) {
+		setBase(base);
+		setAltura(altura);
+	}
+	
+	
+	public calcularArea() {
+		return base * altura;
+	}
+	
+	public calcularPerimetro() {
+		return 2 * (base + altura);
+	}
+}

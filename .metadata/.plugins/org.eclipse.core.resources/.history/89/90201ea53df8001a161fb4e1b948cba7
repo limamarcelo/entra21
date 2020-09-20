@@ -1,0 +1,15 @@
+package entities;
+
+public class Paralelograma {
+
+	
+	
+	public calcularArea() {
+		return base * altura;
+	}
+	
+	public calcularPerimetro() {
+		return 2 * (base + altura);
+	}
+
+}

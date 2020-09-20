@@ -1,0 +1,9 @@
+package entities;
+
+public class Paralelograma extends Retangulo {
+
+	public Paralelograma(double base, double altura) throws LadoInvalidoExcption{
+		super(base, altura);
+	}
+
+}

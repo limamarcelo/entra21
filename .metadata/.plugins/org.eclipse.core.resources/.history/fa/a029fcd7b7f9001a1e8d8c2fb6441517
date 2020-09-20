@@ -1,0 +1,21 @@
+package application;
+
+import entities.Alunos;
+
+class Program {
+	public static void main(String[] args) {
+
+		Alunos allan = new Alunos();
+
+		allan.nome = "Allan";
+		allan.idade = 29;
+		float nota = 10;
+		allan.nota[] = new float [1];
+		allan.confirmarPresenca();
+
+		System.out.println("O nome do aluno é: " + allan.nome);
+		System.out.println("A idade do aluno é: " + allan.idade);
+		System.out.println("A nota do aluno é: " + allan.nota[0]);
+
+	}
+}

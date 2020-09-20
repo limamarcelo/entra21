@@ -1,0 +1,48 @@
+package entities;
+
+public abstract class Quadrilatero extends FiguraGeometrica{
+
+	private double ladoA;
+	private double ladoB;
+	private double ladoC;
+	private double ladoD;
+	
+	public Quadrilatero(double ladoA, double ladoB, double ladoC, double ladoD) {
+	setLadoA();
+	setLadoB();
+	setLadoC();
+	setLadoD();
+	
+	}
+	
+	public void setLadoA(double ladoA) {
+		this.ladoA = ladoA;
+	}
+	
+	public double getLadoA() {
+		return ladoA;
+	}
+	
+	public void setLadoB(double ladoB) {
+		this.ladoB = ladoB;
+	}
+	
+	public double getLadoB() {
+		return ladoB;
+	}
+	public void setLadoC(double ladoC) {
+		this.ladoA = ladoC;
+	}
+	
+	public double getLadoC() {
+		return ladoC;
+	}
+	public void setLadoD(double ladoD) {
+		this.ladoA = ladoD;
+	}
+	
+	public double getLadoD() {
+		return ladoD;
+	}
+	
+}

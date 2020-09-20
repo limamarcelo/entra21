@@ -1,0 +1,18 @@
+package entities;
+
+public class Quadrado extends Quadrilatero {
+
+	public Quadrado(double lado) {
+		//super está chamando o construtor da classe pai
+		super(lado, lado, lado, lado);
+	}
+
+	public double calcularArea() {
+		return getLadoA() * getLadoA();
+	}
+
+	public double calcularPerimetro() {
+		return getLadoA() * 4;
+	}
+
+}
