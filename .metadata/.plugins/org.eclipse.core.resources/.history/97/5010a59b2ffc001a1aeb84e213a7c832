@@ -4,15 +4,10 @@ import java.util.Locale;
 import java.util.Scanner;
 
 import entities.FiguraGeometrica;
-import entities.Paralelograma;
 import entities.Quadrado;
-import entities.Quadrilatero;
-import entities.Retangulo;
-import entities.TrapezioEscaleno;
-import entities.TrapezioIsosceles;
 import execptions.LadoInvalidoException;
 
-public class Program {
+public class ProgramTestTryCatch{
 
 	public static void main(String[] args) throws LadoInvalidoException {
 		Locale.setDefault(Locale.US);
@@ -20,6 +15,24 @@ public class Program {
 
 		System.out.println("Vamos aprender um pouco de geometria");
 		System.out.println();
+
+		/*
+		// exemplo abaixo não entra pois o erro seria de Array e não de Null.
+
+		System.out.println("Primeiro try");
+
+		try {
+			int array[] = new int[10];
+			array[40] = 90;
+
+		}
+		// catch caso der erro no try superior
+		catch (NullPointerException execao) {
+			System.out.println("Deu erro ao acessar o indice do array.");
+		}
+
+		System.out.println();
+		System.out.println("Segundo try");
 
 		try {
 			FiguraGeometrica figura = null;
@@ -47,31 +60,95 @@ public class Program {
 			System.out.println();
 		}
 
+		System.out.println("Terceiro try");
+		try {
+			FiguraGeometrica figura = null;
+			figura.calcularArea();
+
+			try {
+				int array[] = new int[10];
+				array[40] = 90;
+
+			}
+			// catch caso der erro no try superior
+			catch (NullPointerException execao) {
+				System.out.println("Deu erro ao acessar o indice do array.");
+				System.out.println();
+			}
+
+		} catch (ArrayIndexOutOfBoundsException execao) {
+			System.out.println("Deu erro ao acessar o objeto nulo.");
+		}
+
+		catch (NullPointerException execao) {
+			System.out.println("Deu erro ao acessar o objeto nulo.");
+			System.out.println();
+
+		}
+		// se meu try não der erro eu continuo a execução
+		finally {
+			System.out.println("Finalmente entrou no finally");
+		}
+
+		System.out.println("Quarto try");
+		try {
+			FiguraGeometrica figura = null;
+			figura.calcularArea();
+
+			try {
+				int array[] = new int[10];
+				array[40] = 90;
+
+			}
+			// catch caso der erro no try superior
+			catch (ArrayIndexOutOfBoundsException execao) {
+				System.out.println("Deu erro ao acessar o indice do array.");
+				System.out.println();
+			}
+
+		} catch (ArrayIndexOutOfBoundsException execao) {
+			System.out.println("Deu erro ao acessar o objeto nulo.");
+			System.out.println();
+		}
+		// se meu try não der erro eu continuo a execução
+		finally {
+			System.out.println("Finalmente entrou no finally");
+		}
+		System.out.println();
+*/
 		System.out.println();
 		System.out.println("Informe o lado A do Quadrado: ");
-		double ladoA = sc.nextDouble();
 
-		FiguraGeometrica quadrado = new Quadrado(ladoA);
+		double ladoA, ladoB, ladoC, ladoD, altura;
+		
+		ladoA = sc.nextDouble();
+		FiguraGeometrica quadrado;
+		try {
+			quadrado = new Quadrado (ladoA);	
+			System.out.println(quadrado);
+			
+			// substituido pelo toString padrão acima
+			// System.out.println("O quadrado com lado A: " + ((Quadrilatero)
+			// quadrado).getLadoA() + ", tem a área de: " + areaQuadrado);
 
-		System.out.println(quadrado);
-		// substituido pelo toString padrão
-		// System.out.println("O quadrado com lado A: " + ((Quadrilatero)
-		// quadrado).getLadoA() + ", tem a área de: " + areaQuadrado);
-
-		System.out.println();
-
-		System.out.println(((Quadrado) quadrado).stringPerimetroQuadrado());
-
-		// substituido pelo toString específico do stringPerimetroQuadrado
-		// System.out.println("O quadrado com lado A: " + ((Quadrilatero)
-		// quadrado).getLadoA() + ", tem o perímetro de: " + perimetroQuadrado);
-
+			System.out.println();
+			System.out.println(((Quadrado) quadrado).stringPerimetroQuadrado());
+			
+			// substituido pelo toString específico do stringPerimetroQuadrado acima
+			// System.out.println("O quadrado com lado A: " + ((Quadrilatero)
+			// quadrado).getLadoA() + ", tem o perímetro de: " + perimetroQuadrado);
+	
+		} catch (LadoInvalidoException exception){
+			exception.getMessage(exeption);
+			
+		}
+		
 		/*
 		 * System.out.println("------------------");
 		 * 
 		 * System.out.println("Informe o lado A do Retângulo: "); ladoA =
 		 * sc.nextDouble(); System.out.println("Informe o lado B do Retângulo: ");
-		 * double ladoB = sc.nextDouble(); FiguraGeometrica retangulo = new
+		 * ladoB = sc.nextDouble(); FiguraGeometrica retangulo = new
 		 * Retangulo(ladoA, ladoB);
 		 * 
 		 * double areaRetangulo = retangulo.calcularArea();
@@ -107,7 +184,7 @@ public class Program {
 		 * ladoA = sc.nextDouble();
 		 * System.out.println("Informe a Base Maior do Trapezio Isósceles: "); ladoB =
 		 * sc.nextDouble();
-		 * System.out.println("Informe a Base Menor do Trapezio Isósceles: "); double
+		 * System.out.println("Informe a Base Menor do Trapezio Isósceles: ");
 		 * ladoD = sc.nextDouble();
 		 * System.out.println("Informe a altura do Trapezio Isósceles: "); double altura
 		 * = sc.nextDouble();

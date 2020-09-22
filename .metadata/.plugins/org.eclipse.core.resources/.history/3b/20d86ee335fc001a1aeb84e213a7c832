@@ -10,11 +10,10 @@ import entities.Quadrilatero;
 import entities.Retangulo;
 import entities.TrapezioEscaleno;
 import entities.TrapezioIsosceles;
-import execptions.LadoInvalidoException;
 
 public class Program {
 
-	public static void main(String[] args) throws LadoInvalidoException {
+	public static void main(String[] args) {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 

@@ -56,9 +56,9 @@ public abstract class Quadrilatero implements FiguraGeometrica {
 		return ladoC;
 	}
 
-	public void setLadoD(double ladoD) throws LadoInvalidoException {
+	public void setLadoD(double ladoD) throws LadoInvalidoException{
 
-		if (ladoD <= 0) {
+		if(ladoD<=0) {
 			throw new LadoInvalidoException("O lado D é inválido");
 		}
 		this.ladoD = ladoD;
