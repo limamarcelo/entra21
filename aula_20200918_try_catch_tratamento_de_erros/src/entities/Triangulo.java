@@ -1,12 +1,14 @@
 package entities;
 
-public class Triangulo implements FiguraGeometrica {
+import execptions.LadoInvalidoException;
+
+public class Triangulo implements FiguraGeometrica{
 
 	private double base;
 	private double altura;
 	private double lado;
 
-	public Triangulo(double lado, double base, double altura) {
+	public Triangulo(double lado, double base, double altura) throws LadoInvalidoException{
 		setBase(base);
 		setAltura(altura);
 		setLado(lado);
@@ -43,4 +45,27 @@ public class Triangulo implements FiguraGeometrica {
 	public double calcularPerimetro() {
 		return 3 * lado;
 	}
+	
+	public String toString() {
+		return 	"O triângulo com lado A de tamanho: "
+				+ getLado()
+				+ "e com base de tamanho: "
+				+ getBase()
+				+ "e com altura de tamanho: "
+				+ getAltura()
+				+ ", tem a área de: "
+				+ calcularArea();
+	}
+	
+	public String stringPerimetro() {
+		return 	"O triângulo com lado A de tamanho: "
+				+ getLado()
+				+ "e com base de tamanho: "
+				+ getBase()
+				+ "e com altura de tamanho: "
+				+ getAltura()
+				+ ", tem o perímetro de: "
+				+ calcularPerimetro();
+	}
+
 }

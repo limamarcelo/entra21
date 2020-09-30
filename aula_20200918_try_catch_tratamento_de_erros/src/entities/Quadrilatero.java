@@ -68,12 +68,4 @@ public abstract class Quadrilatero implements FiguraGeometrica {
 		return ladoD;
 	}
 
-	public String toString() {
-		return "O quadrado com lado A: " + getLadoA() + ", tem a área de: " + calcularArea();
-	}
-
-	public String stringPerimetroQuadrado() {
-		return "O quadrado com lado A: " + getLadoA() + ", tem o perimetro de: " + calcularPerimetro();
-	}
-
 }

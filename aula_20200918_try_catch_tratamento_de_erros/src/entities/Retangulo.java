@@ -15,4 +15,23 @@ public class Retangulo extends Quadrilatero {
 	public double calcularPerimetro() {
 		return 2 * (getLadoA() + getLadoB());
 	}
+	
+	public String toString() {
+		return 	"O retângulo com lado A de tamanho: "
+				+ getLadoA()
+				+ "e lado B de tamanho: "
+				+ getLadoB()
+				+ ", tem a área de: "
+				+ calcularArea();
+	}
+	
+	public String stringPerimetro() {
+		return 	"O retângulo com lado A de tamanho: "
+				+ getLadoA()
+				+ "e lado B de tamanho: "
+				+ getLadoB()
+				+ ", tem o perimetro de: "
+				+ calcularPerimetro();
+	}
+
 }

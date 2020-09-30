@@ -21,8 +21,10 @@ public class exemplo_array {
 		// notas [2] = 2000; - exemplo dá para mudar o valor do array no meio do
 		// processo se quiser.
 		System.out.println(notas[2]);
-		System.out.println(notas); // onde está na memória
-		System.out.println(notas.length); // tamanho de notas
+		// onde está na memória
+		System.out.println(notas);
+		// tamanho de notas
+		System.out.println(notas.length);
 		in.close();
 	}
 

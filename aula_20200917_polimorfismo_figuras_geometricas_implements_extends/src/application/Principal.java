@@ -17,31 +17,6 @@ public class Principal {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 
-		try {
-			FiguraGeometrica figura = null;
-			figura.calcularArea();
-
-			try {
-				int array[] = new int[10];
-				array[40] = 90;
-
-			}
-			// catch caso der erro no try superior
-			catch (ArrayIndexOutOfBoundsException execao) {
-				System.out.println("Deu erro ao acessar o indice do array.");
-			}
-
-		} catch (NullPointerException execao) {
-			System.out.println("Deu erro ao acessar o objeto nulo.");
-
-		}
-		// se meu try não der erro eu continuo a execução
-		finally {
-			System.out.println("Finalmente entrou");
-		}
-		System.out.println();
-		
-		
 		System.out.println("Informe o lado A do Quadrado: ");
 		double ladoA = sc.nextDouble();
 
@@ -58,7 +33,7 @@ public class Principal {
 		//substituido pelo toString específico do stringPerimetroQuadrado
 		//System.out.println("O quadrado com lado A: " + ((Quadrilatero) quadrado).getLadoA() + ", tem o perímetro de: " + perimetroQuadrado);
 
-/*		System.out.println("------------------");
+		System.out.println("------------------");
 
 		System.out.println("Informe o lado A do Retângulo: ");
 		ladoA = sc.nextDouble();
@@ -146,7 +121,7 @@ public class Principal {
 				+ " e com a Base Maior: " + ((Quadrilatero) trapezioEscaleno).getLadoB() + " e com lado C: "
 				+ ((Quadrilatero) trapezioEscaleno).getLadoC() + " e com a Base Menor: "
 				+ ((Quadrilatero) trapezioEscaleno).getLadoD() + ", tem o perímetro de: " + perimetroTrapezioEscaleno);
-*/
+
 		sc.close();
 	}
 }

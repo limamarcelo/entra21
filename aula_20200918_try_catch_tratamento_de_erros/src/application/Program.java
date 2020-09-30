@@ -6,10 +6,10 @@ import java.util.Scanner;
 import entities.FiguraGeometrica;
 import entities.Paralelograma;
 import entities.Quadrado;
-import entities.Quadrilatero;
 import entities.Retangulo;
 import entities.TrapezioEscaleno;
 import entities.TrapezioIsosceles;
+import entities.Triangulo;
 import execptions.LadoInvalidoException;
 
 public class Program {
@@ -21,146 +21,200 @@ public class Program {
 		System.out.println("Vamos aprender um pouco de geometria");
 		System.out.println();
 
-		try {
-			FiguraGeometrica figura = null;
-			figura.calcularArea();
-
-			try {
-				int array[] = new int[10];
-				array[1000] = 90;
-
-			}
-			// catch caso der erro no try superior
-			catch (ArrayIndexOutOfBoundsException execao) {
-				System.out.println("Deu erro ao acessar o indice do array.");
-				System.out.println();
-			}
-
-		} catch (NullPointerException execao) {
-			System.out.println("Deu erro ao acessar o objeto nulo.");
-			System.out.println();
-
-		}
-		// se meu try não der erro eu continuo a execução
-		finally {
-			System.out.println("Finalmente entrou com o finally");
-			System.out.println();
-		}
+		/*
+		 * // exemplo abaixo não entra pois o erro seria de Array e não de Null.
+		 * 
+		 * System.out.println("Primeiro try");
+		 * 
+		 * try { int array[] = new int[10]; array[40] = 90;
+		 * 
+		 * } // catch caso der erro no try superior catch (NullPointerException execao)
+		 * { System.out.println("Deu erro ao acessar o indice do array."); }
+		 * 
+		 * System.out.println(); System.out.println("Segundo try");
+		 * 
+		 * try { FiguraGeometrica figura = null; figura.calcularArea();
+		 * 
+		 * try { int array[] = new int[10]; array[1000] = 90;
+		 * 
+		 * } // catch caso der erro no try superior catch
+		 * (ArrayIndexOutOfBoundsException execao) {
+		 * System.out.println("Deu erro ao acessar o indice do array.");
+		 * System.out.println(); }
+		 * 
+		 * } catch (NullPointerException execao) {
+		 * System.out.println("Deu erro ao acessar o objeto nulo.");
+		 * System.out.println();
+		 * 
+		 * } // se meu try não der erro eu continuo a execução finally {
+		 * System.out.println("Finalmente entrou com o finally"); System.out.println();
+		 * }
+		 * 
+		 * System.out.println("Terceiro try"); try { FiguraGeometrica figura = null;
+		 * figura.calcularArea();
+		 * 
+		 * try { int array[] = new int[10]; array[40] = 90;
+		 * 
+		 * } // catch caso der erro no try superior catch (NullPointerException execao)
+		 * { System.out.println("Deu erro ao acessar o indice do array.");
+		 * System.out.println(); }
+		 * 
+		 * } catch (ArrayIndexOutOfBoundsException execao) {
+		 * System.out.println("Deu erro ao acessar o objeto nulo."); }
+		 * 
+		 * catch (NullPointerException execao) {
+		 * System.out.println("Deu erro ao acessar o objeto nulo.");
+		 * System.out.println();
+		 * 
+		 * } // se meu try não der erro eu continuo a execução finally {
+		 * System.out.println("Finalmente entrou no finally"); }
+		 * 
+		 * System.out.println("Quarto try"); try { FiguraGeometrica figura = null;
+		 * figura.calcularArea();
+		 * 
+		 * try { int array[] = new int[10]; array[40] = 90;
+		 * 
+		 * } // catch caso der erro no try superior catch
+		 * (ArrayIndexOutOfBoundsException execao) {
+		 * System.out.println("Deu erro ao acessar o indice do array.");
+		 * System.out.println(); }
+		 * 
+		 * } catch (ArrayIndexOutOfBoundsException execao) {
+		 * System.out.println("Deu erro ao acessar o objeto nulo.");
+		 * System.out.println(); } // se meu try não der erro eu continuo a execução
+		 * finally { System.out.println("Finalmente entrou no finally"); }
+		 * System.out.println();
+		 */
+		double ladoA, ladoB, ladoC, ladoD, altura;
 
 		System.out.println();
 		System.out.println("Informe o lado A do Quadrado: ");
-		double ladoA = sc.nextDouble();
+		ladoA = sc.nextDouble();
+		FiguraGeometrica quadrado;
+		try {
+			quadrado = new Quadrado(ladoA);
+			System.out.println(quadrado);
 
-		FiguraGeometrica quadrado = new Quadrado(ladoA);
+			System.out.println();
+			System.out.println(((Quadrado) quadrado).stringPerimetroQuadrado());
 
-		System.out.println(quadrado);
-		// substituido pelo toString padrão
-		// System.out.println("O quadrado com lado A: " + ((Quadrilatero)
-		// quadrado).getLadoA() + ", tem a área de: " + areaQuadrado);
+		} catch (LadoInvalidoException exception) {
+			System.out.println(exception.getMessage());
 
-		System.out.println();
+		}
 
-		System.out.println(((Quadrado) quadrado).stringPerimetroQuadrado());
+		System.out.println("------------------");
 
-		// substituido pelo toString específico do stringPerimetroQuadrado
-		// System.out.println("O quadrado com lado A: " + ((Quadrilatero)
-		// quadrado).getLadoA() + ", tem o perímetro de: " + perimetroQuadrado);
+		System.out.println("Informe o lado A do Retângulo: ");
+		ladoA = sc.nextDouble();
+		System.out.println("Informe o lado B do Retângulo: ");
+		ladoB = sc.nextDouble();
 
-		/*
-		 * System.out.println("------------------");
-		 * 
-		 * System.out.println("Informe o lado A do Retângulo: "); ladoA =
-		 * sc.nextDouble(); System.out.println("Informe o lado B do Retângulo: ");
-		 * double ladoB = sc.nextDouble(); FiguraGeometrica retangulo = new
-		 * Retangulo(ladoA, ladoB);
-		 * 
-		 * double areaRetangulo = retangulo.calcularArea();
-		 * System.out.println("O retângulo com lado A: " + ((Quadrilatero)
-		 * retangulo).getLadoA() + " e com lado B: " + ((Quadrilatero)
-		 * retangulo).getLadoB() + ", tem a área de: " + areaRetangulo);
-		 * System.out.println(); double perimetroRetangulo =
-		 * retangulo.calcularPerimetro(); System.out.println("O retângulo com lado A: "
-		 * + ((Quadrilatero) retangulo).getLadoA() + " e com lado B: " + ((Quadrilatero)
-		 * retangulo).getLadoB() + ", tem o perímetro de: " + perimetroRetangulo);
-		 * 
-		 * System.out.println("------------------");
-		 * 
-		 * System.out.println("Informe o lado A do Paralelograma: "); ladoA =
-		 * sc.nextDouble(); System.out.println("Informe o lado B do Paralelograma: ");
-		 * ladoB = sc.nextDouble(); FiguraGeometrica paralelograma = new
-		 * Paralelograma(ladoA, ladoB);
-		 * 
-		 * double areaParalelograma = paralelograma.calcularArea(); System.out
-		 * .println("O Paralelograma com lado A: " + ((Quadrilatero)
-		 * paralelograma).getLadoA() + " e com lado B: " + ((Quadrilatero)
-		 * paralelograma).getLadoB() + ", tem a área de: " + areaParalelograma);
-		 * System.out.println(); double perimetroParalelograma =
-		 * paralelograma.calcularPerimetro();
-		 * System.out.println("O Paralelograma com lado A: " + ((Quadrilatero)
-		 * paralelograma).getLadoA() + " e com lado B: " + ((Quadrilatero)
-		 * paralelograma).getLadoB() + ", tem o perímetro de: " +
-		 * perimetroParalelograma);
-		 * 
-		 * System.out.println("------------------");
-		 * 
-		 * System.out.println("Informe o tamanho dos lados do Trapezio Isósceles: ");
-		 * ladoA = sc.nextDouble();
-		 * System.out.println("Informe a Base Maior do Trapezio Isósceles: "); ladoB =
-		 * sc.nextDouble();
-		 * System.out.println("Informe a Base Menor do Trapezio Isósceles: "); double
-		 * ladoD = sc.nextDouble();
-		 * System.out.println("Informe a altura do Trapezio Isósceles: "); double altura
-		 * = sc.nextDouble();
-		 * 
-		 * FiguraGeometrica trapezioIsosceles = new TrapezioIsosceles(ladoA, ladoB,
-		 * ladoA, ladoD, altura);
-		 * 
-		 * double areaTrapezioIsosceles = trapezioIsosceles.calcularArea();
-		 * System.out.println("O Trapézio com lado A: " + ((Quadrilatero)
-		 * trapezioIsosceles).getLadoA() + " e com a Base Maior: " + ((Quadrilatero)
-		 * trapezioIsosceles).getLadoB() + " e com lado C: " + ((Quadrilatero)
-		 * trapezioIsosceles).getLadoC() + " e com a Base Menor: " + ((Quadrilatero)
-		 * trapezioIsosceles).getLadoD() + " e com altura de: " + ((TrapezioIsosceles)
-		 * trapezioIsosceles).getAltura() + ", tem a área de: " +
-		 * areaTrapezioIsosceles); System.out.println(); double
-		 * perimetroTrapezioIsosceles = trapezioIsosceles.calcularPerimetro();
-		 * System.out.println("O Trapézio com lado A: " + ((Quadrilatero)
-		 * trapezioIsosceles).getLadoA() + " e com a Base Maior: " + ((Quadrilatero)
-		 * trapezioIsosceles).getLadoB() + " e com lado C: " + ((Quadrilatero)
-		 * trapezioIsosceles).getLadoC() + " e com a Base Menor: " + ((Quadrilatero)
-		 * trapezioIsosceles).getLadoD() + ", tem o perímetro de: " +
-		 * perimetroTrapezioIsosceles);
-		 * 
-		 * System.out.println("------------------");
-		 * 
-		 * System.out.println("Informe o lado A do Trapezio: "); ladoA =
-		 * sc.nextDouble(); System.out.println("Informe a Base Maior do Trapezio: ");
-		 * ladoB = sc.nextDouble();
-		 * System.out.println("Informe o lado C do Trapezio: "); double ladoC =
-		 * sc.nextDouble(); System.out.println("Informe a Base Menor do Trapezio: ");
-		 * ladoD = sc.nextDouble();
-		 * System.out.println("Informe a altura do Trapezio: "); altura =
-		 * sc.nextDouble();
-		 * 
-		 * FiguraGeometrica trapezioEscaleno = new TrapezioEscaleno(ladoA, ladoB, ladoC,
-		 * ladoD, altura);
-		 * 
-		 * double areaTrapezioEscaleno = trapezioEscaleno.calcularArea();
-		 * System.out.println("O Trapézio com lado A: " + ((Quadrilatero)
-		 * trapezioEscaleno).getLadoA() + " e com a Base Maior: " + ((Quadrilatero)
-		 * trapezioEscaleno).getLadoB() + " e com lado C: " + ((Quadrilatero)
-		 * trapezioEscaleno).getLadoC() + " e com a Base Menor: " + ((Quadrilatero)
-		 * trapezioEscaleno).getLadoD() + " e com altura de: " + ((TrapezioEscaleno)
-		 * trapezioEscaleno).getAltura() + ", tem a área de: " + areaTrapezioEscaleno);
-		 * System.out.println(); double perimetroTrapezioEscaleno =
-		 * trapezioEscaleno.calcularPerimetro();
-		 * System.out.println("O Trapézio com lado A: " + ((Quadrilatero)
-		 * trapezioEscaleno).getLadoA() + " e com a Base Maior: " + ((Quadrilatero)
-		 * trapezioEscaleno).getLadoB() + " e com lado C: " + ((Quadrilatero)
-		 * trapezioEscaleno).getLadoC() + " e com a Base Menor: " + ((Quadrilatero)
-		 * trapezioEscaleno).getLadoD() + ", tem o perímetro de: " +
-		 * perimetroTrapezioEscaleno);
-		 */
+		FiguraGeometrica retangulo;
+		try {
+			retangulo = new Retangulo(ladoA, ladoB);
+			System.out.println(retangulo);
+
+			System.out.println();
+			System.out.println(((Retangulo) retangulo).stringPerimetro());
+
+		} catch (LadoInvalidoException exception) {
+			System.out.println(exception.getMessage());
+
+		}
+
+		System.out.println("------------------");
+
+		System.out.println("Informe o lado A do Paralelograma: ");
+		ladoA = sc.nextDouble();
+		System.out.println("Informe o lado B do Retângulo: ");
+		ladoB = sc.nextDouble();
+
+		FiguraGeometrica paralelograma;
+		try {
+			paralelograma = new Paralelograma(ladoA, ladoB);
+			System.out.println(paralelograma);
+
+			System.out.println();
+			System.out.println(((Retangulo) paralelograma).stringPerimetro());
+
+		} catch (LadoInvalidoException exception) {
+			System.out.println(exception.getMessage());
+
+		}
+
+		System.out.println("------------------");
+
+		System.out.println("Informe o tamanho dos lados do Trapezio Isósceles: ");
+		ladoA = sc.nextDouble();
+		System.out.println("Informe a Base Maior do Trapezio Isósceles: ");
+		ladoB = sc.nextDouble();
+		System.out.println("Informe a Base Menor do Trapezio Isósceles: ");
+		ladoD = sc.nextDouble();
+		System.out.println("Informe a altura do Trapezio Isósceles: ");
+		altura = sc.nextDouble();
+
+		FiguraGeometrica trapezioIsosceles;
+		try {
+			trapezioIsosceles = new TrapezioIsosceles(ladoA, ladoB, ladoA, ladoD, altura);
+			System.out.println(trapezioIsosceles);
+
+			System.out.println();
+			System.out.println(((TrapezioIsosceles) trapezioIsosceles).stringPerimetro());
+
+		} catch (LadoInvalidoException exception) {
+			System.out.println(exception.getMessage());
+
+		}
+
+		System.out.println("------------------");
+
+		System.out.println("Informe o tamanho do lado A do Trapezio Escaleno: ");
+		ladoA = sc.nextDouble();
+		System.out.println("Informe a Base Maior do Trapezio Escaleno: ");
+		ladoB = sc.nextDouble();
+		System.out.println("Informe o tamanho do lado B do Trapezio Escaleno: ");
+		ladoC = sc.nextDouble();
+		System.out.println("Informe a Base Menor do Trapezio Escaleno: ");
+		ladoD = sc.nextDouble();
+		System.out.println("Informe a altura do Trapezio Escaleno: ");
+		altura = sc.nextDouble();
+
+		FiguraGeometrica trapezioEscaleno;
+		try {
+			trapezioEscaleno = new TrapezioEscaleno(ladoA, ladoB, ladoC, ladoD, altura);
+			System.out.println(trapezioEscaleno);
+
+			System.out.println();
+			System.out.println(((TrapezioEscaleno) trapezioEscaleno).stringPerimetro());
+
+		} catch (LadoInvalidoException exception) {
+			System.out.println(exception.getMessage());
+
+		}
+
+		System.out.println("------------------");
+		double lado, base;
+		System.out.println("Informe o tamanho do lado do Triângulo: ");
+		lado = sc.nextDouble();
+		System.out.println("Informe o tamanho da base do Triângulo: ");
+		base = sc.nextDouble();
+		System.out.println("Informe o tamanho da altura do Triângulo: ");
+		altura = sc.nextDouble();
+
+		FiguraGeometrica triangulo;
+		try {
+			triangulo = new Triangulo(lado, base, altura);
+			System.out.println(triangulo);
+
+			System.out.println();
+			System.out.println(((Triangulo) triangulo).stringPerimetro());
+
+		} catch (LadoInvalidoException exception) {
+			System.out.println(exception.getMessage());
+
+		}
+
 		sc.close();
 	}
 }

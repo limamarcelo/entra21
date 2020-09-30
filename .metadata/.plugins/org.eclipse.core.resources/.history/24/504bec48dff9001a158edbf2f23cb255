@@ -1,7 +1,0 @@
-package execptions;
-
-public class LadoInvalidoException extends Exception{
-
-	
-	
-}
