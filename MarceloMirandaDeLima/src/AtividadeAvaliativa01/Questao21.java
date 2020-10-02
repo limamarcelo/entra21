@@ -1,8 +1,8 @@
-package exercicios;
+package AtividadeAvaliativa01;
 
 import java.util.Scanner;
 
-public class Exercicio_21 {
+public class Questao21 {
 
 	public static void main(String[] args) {
 		Scanner entrada = new Scanner(System.in);

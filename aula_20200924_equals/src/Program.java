@@ -30,7 +30,7 @@ public class Program {
 		
 		Pessoa habitantes = new Pessoa(nome, provento);
 		
-		for(int i=0;i<habitantes)
+		for(int i=0;i<habitantes.)
 		System.out.println(pessoas.toString());
 
 		

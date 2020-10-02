@@ -40,7 +40,7 @@ public class Exercicio_18 {
 				maior = z;
 			}
 		}
-		
+
 		System.out.println("A soma dos valores informados é: " + soma);
 		System.out.println("A média dos valores informados é: " + media);
 		System.out.println("O produto dos valores informados é: " + produto);
