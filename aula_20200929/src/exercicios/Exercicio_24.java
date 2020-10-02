@@ -9,13 +9,16 @@ public class Exercicio_24 {
 		Scanner sc = new Scanner(System.in);
 		Locale.setDefault(Locale.US);
 
+		// Na correção o professor sugeriu retirar o último if pois não havia
+		// necessidade. OK.
+
 		int numero1, numero2, numero3, numero4, numero5;
 		int zero = 0;
 		int negativo = 0;
 		int positivo = 0;
 
 		System.out.println("Digite cinco números inteiros");
-		System.out.print("Digite o #1 :");
+		System.out.print("Digite o #1: ");
 		numero1 = sc.nextInt();
 		if (numero1 == 0) {
 			zero += 1;
@@ -23,13 +26,11 @@ public class Exercicio_24 {
 			if (numero1 > 0) {
 				positivo += 1;
 			} else {
-				if (numero1 < 0) {
-					negativo += 1;
-				}
+				negativo += 1;
 			}
 		}
 
-		System.out.print("Digite o #2 :");
+		System.out.print("Digite o #2: ");
 		numero2 = sc.nextInt();
 		if (numero2 == 0) {
 			zero += 1;
@@ -37,13 +38,11 @@ public class Exercicio_24 {
 			if (numero2 > 0) {
 				positivo += 1;
 			} else {
-				if (numero2 < 0) {
-					negativo += 1;
-				}
+				negativo += 1;
 			}
 		}
 
-		System.out.print("Digite o #3 :");
+		System.out.print("Digite o #3: ");
 		numero3 = sc.nextInt();
 		if (numero3 == 0) {
 			zero += 1;
@@ -57,7 +56,7 @@ public class Exercicio_24 {
 			}
 		}
 
-		System.out.print("Digite o #4 :");
+		System.out.print("Digite o #4: ");
 		numero4 = sc.nextInt();
 		if (numero4 == 0) {
 			zero += 1;
@@ -65,13 +64,11 @@ public class Exercicio_24 {
 			if (numero4 > 0) {
 				positivo += 1;
 			} else {
-				if (numero4 < 0) {
-					negativo += 1;
-				}
+				negativo += 1;
 			}
 		}
 
-		System.out.print("Digite o #5 :");
+		System.out.print("Digite o #5: ");
 		numero5 = sc.nextInt();
 		if (numero5 == 0) {
 			zero += 1;
@@ -79,9 +76,7 @@ public class Exercicio_24 {
 			if (numero5 > 0) {
 				positivo += 1;
 			} else {
-				if (numero5 < 0) {
-					negativo += 1;
-				}
+				negativo += 1;
 			}
 		}
 

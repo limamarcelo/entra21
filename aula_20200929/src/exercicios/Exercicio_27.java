@@ -23,8 +23,6 @@ public class Exercicio_27 {
 	System.out.printf("Caso você divida sua despesa com mais três pessoas a sua economia seria de: R$%.2f\n", custo - custo / 4);
 	System.out.printf("Caso você divida sua despesa com mais quatro pessoas a sua economia seria de: R$%.2f\n", custo - custo / 5);
 	
-	
-	
 	sc.close();
 	}
 }

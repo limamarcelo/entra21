@@ -1,9 +1,9 @@
 
 
+import java.util.ArrayList;
 import java.util.Locale;
 import java.util.Scanner;
 
-import entities.Cidade;
 import entities.Pessoa;
 import entities.PessoaFisica;
 
@@ -12,6 +12,8 @@ public class Program {
 	public static void main(String[] args) {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
+
+		Pessoa habitantes;
 
 		Pessoa pessoa1 = null;
 		Pessoa pessoa2 = null;
@@ -28,7 +30,7 @@ public class Program {
 		String nome;
 		double provento;
 		
-		Pessoa habitantes = new Pessoa(nome, provento);
+		habitantes = new Pessoa(nome, provento);
 		
 		for(int i=0;i<habitantes.)
 		System.out.println(pessoas.toString());

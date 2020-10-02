@@ -13,9 +13,10 @@ public class Questao24 {
 		int zero = 0;
 		int negativo = 0;
 		int positivo = 0;
-
+		// Na correção o professor sugeriu retirar o último if pois não havia
+		// necessidade. OK.
 		System.out.println("Digite cinco números inteiros");
-		System.out.print("Digite o #1 :");
+		System.out.print("Digite o #1: ");
 		numero1 = sc.nextInt();
 		if (numero1 == 0) {
 			zero += 1;
@@ -23,13 +24,13 @@ public class Questao24 {
 			if (numero1 > 0) {
 				positivo += 1;
 			} else {
-				if (numero1 < 0) {
-					negativo += 1;
-				}
+				negativo += 1;
 			}
 		}
-
-		System.out.print("Digite o #2 :");
+		/*
+		 * else { if (numero1 < 0) { } } }
+		 */
+		System.out.print("Digite o #2: ");
 		numero2 = sc.nextInt();
 		if (numero2 == 0) {
 			zero += 1;
@@ -37,13 +38,13 @@ public class Questao24 {
 			if (numero2 > 0) {
 				positivo += 1;
 			} else {
-				if (numero2 < 0) {
-					negativo += 1;
-				}
+				negativo += 1;
 			}
 		}
-
-		System.out.print("Digite o #3 :");
+		/*
+		 * else { if (numero2 < 0) { negativo += 1; } } }
+		 */
+		System.out.print("Digite o #3: ");
 		numero3 = sc.nextInt();
 		if (numero3 == 0) {
 			zero += 1;
@@ -51,13 +52,15 @@ public class Questao24 {
 			if (numero3 > 0) {
 				positivo += 1;
 			} else {
-				if (numero3 < 0) {
-					negativo += 1;
-				}
+				negativo += 1;
 			}
 		}
 
-		System.out.print("Digite o #4 :");
+		/*
+		 * else { if (numero3 < 0) { } } }
+		 */
+
+		System.out.print("Digite o #4: ");
 		numero4 = sc.nextInt();
 		if (numero4 == 0) {
 			zero += 1;
@@ -65,13 +68,14 @@ public class Questao24 {
 			if (numero4 > 0) {
 				positivo += 1;
 			} else {
-				if (numero4 < 0) {
-					negativo += 1;
-				}
+				negativo += 1;
 			}
 		}
 
-		System.out.print("Digite o #5 :");
+		/*
+		 * else { if (numero4 < 0) { negativo += 1; } } }
+		 */
+		System.out.print("Digite o #5: ");
 		numero5 = sc.nextInt();
 		if (numero5 == 0) {
 			zero += 1;
@@ -79,11 +83,12 @@ public class Questao24 {
 			if (numero5 > 0) {
 				positivo += 1;
 			} else {
-				if (numero5 < 0) {
-					negativo += 1;
-				}
+				negativo += 1;
 			}
 		}
+		/*
+		 * else { if (numero5 < 0) { negativo += 1; } } }
+		 */
 
 		System.out.println("Quantidade de número zero = " + zero);
 		System.out.println("Quantidade de números positivos = " + positivo);
