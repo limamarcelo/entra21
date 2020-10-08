@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Locale;
 import java.util.Scanner;
 
+import entities.Cidade;
 import entities.Pessoa;
 import entities.PessoaFisica;
 
@@ -13,7 +14,7 @@ public class Program {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 
-		Pessoa habitantes;
+		ArrayList<Pessoa> habitantes = new ArrayList<>();
 
 		Pessoa pessoa1 = null;
 		Pessoa pessoa2 = null;
@@ -30,7 +31,7 @@ public class Program {
 		String nome;
 		double provento;
 		
-		habitantes = new Pessoa(nome, provento);
+		habitantes = new Cidade(nome, provento);
 		
 		for(int i=0;i<habitantes.)
 		System.out.println(pessoas.toString());

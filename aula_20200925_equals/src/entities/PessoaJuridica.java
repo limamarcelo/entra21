@@ -34,7 +34,7 @@ public class PessoaJuridica extends Pessoa {
 		// abaixo não dá para comparar com != o cnpj pois o pessoa.getCnpj() é do tipo
 		// PessoaJuridica e o outro uma String não do tipo primitivo então tem que
 		// comparar utilizando o equals
-		if (getProvento() != pessoa.getProvento() || !(getCnpj().equals(pessoa.getCnpj())))
+		if (getProvento() != pessoa.getProvento() || !(getCnpj().equals(pessoa.getCnpj()) || !(getNome().equals(pessoa.getNome()))))
 			return false;
 
 		return true;

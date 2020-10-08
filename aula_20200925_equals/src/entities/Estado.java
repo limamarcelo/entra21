@@ -12,15 +12,15 @@ public class Estado {
 	}
 	
 	public Estado(String nome) {
-		setNomeEstado(nome);
+		setNome(nome);
 		cidades = new ArrayList<Cidade>();
 	}
 	
-	public String getNomeEstado() {
+	public String getNome() {
 		return this.nome;
 	}
 	
-	public void setNomeEstado(String nome) {
+	public void setNome(String nome) {
 		this.nome = nome;
 	}
 	
@@ -34,6 +34,16 @@ public class Estado {
 	
 	public boolean removerCidade(Cidade cidade) {
 		return cidades.remove(cidade);
+	}
+	
+	public void adicionarHabitante(Cidade cidade, Pessoa habitante) {
+		int indice = cidade.indexOf(cidade);
+		cidade.get(indice).adicionarHabitante(habitante);
+	}
+	
+	public void mudarHabitante(Cidade origem, Cidade destino, Pessoa habitante) {
+		origem.removerHabitante(habitante);
+		destino.adicionarHabitante(habitante);
 	}
 	
 	public boolean equals(Object objeto) {
@@ -53,9 +63,8 @@ public class Estado {
 		// abaixo não dá para comparar com != o cnpj pois o pessoa.getCnpj() é do tipo
 		// PessoaJuridica e o outro uma String não do tipo primitivo então tem que
 		// comparar utilizando o equals
-		if (!(getNomeEstado().equals(estado.getNomeEstado())))
+		if (!(getNome().equals(estado.getNome())))
 			return false;
-
 		return true;
 	}
 	

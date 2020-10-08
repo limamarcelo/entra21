@@ -12,15 +12,15 @@ public class Pais {
 	}
 	
 	public Pais(String nome) {
-		setNomePais(nome);
+		setNome(nome);
 		estados = new ArrayList<Estado>();
 	}
 	
-	public String getNomePais() {
+	public String getNome() {
 		return this.nome;
 	}
 	
-	public void setNomePais(String nome) {
+	public void setNome(String nome) {
 		this.nome = nome;
 	}
 	
@@ -53,7 +53,7 @@ public class Pais {
 		// abaixo não dá para comparar com != o cnpj pois o pessoa.getCnpj() é do tipo
 		// PessoaJuridica e o outro uma String não do tipo primitivo então tem que
 		// comparar utilizando o equals
-		if (!(getNomePais().equals(pais.getNomePais())))
+		if (!(getNome().equals(pais.getNome())))
 			return false;
 
 		return true;

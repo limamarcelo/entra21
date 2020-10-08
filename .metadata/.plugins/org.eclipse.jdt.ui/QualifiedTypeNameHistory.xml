@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="com.sun.java_cup.internal.runtime.Scanner"/>
-    <fullyQualifiedTypeName name="java.util.Collections"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="entities.Motocicleta"/>
     <fullyQualifiedTypeName name="entities.Quadrilatero"/>
@@ -10,10 +9,12 @@
     <fullyQualifiedTypeName name="entities.Trapezios"/>
     <fullyQualifiedTypeName name="execptions.LadoInvalidoException"/>
     <fullyQualifiedTypeName name="entities.PessoaFisica"/>
-    <fullyQualifiedTypeName name="entities.Pessoa"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
     <fullyQualifiedTypeName name="java.util.Locale"/>
     <fullyQualifiedTypeName name="java.lang.Math"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.Collections"/>
+    <fullyQualifiedTypeName name="entities.Pessoa"/>
 </qualifiedTypeNameHistroy>

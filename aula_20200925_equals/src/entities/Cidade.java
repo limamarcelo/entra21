@@ -11,17 +11,17 @@ public class Cidade {
 	private ArrayList<Pais> paises;
 
 	public Cidade(String nome) {
-		setNomeCidade(nome);
+		setNome(nome);
 		habitantes = new ArrayList<Pessoa>();
 		estados = new ArrayList<Estado>();
 		paises = new ArrayList<Pais>();
 	}
 
-	public String getNomeCidade() {
+	public String getNome() {
 		return nome;
 	}
 
-	public void setNomeCidade(String nome) {
+	public void setNome(String nome) {
 		this.nome = nome;
 	}
 
@@ -39,6 +39,10 @@ public class Cidade {
 		return habitantes.remove(habitante);
 	}
 
+	public int quantidadeHabitante() {
+		return habitantes.size();
+	}
+	
 	public List<Pessoa> getPessoa() {
 		return habitantes;
 	}
@@ -77,7 +81,7 @@ public class Cidade {
 		// Abaixo não dá para comparar com != o cnpj pois o pessoa.getCnpj() é do tipo
 		// PessoaJuridica e o outro uma String não do tipo primitivo então tem que
 		// comparar utilizando o equals
-		if (!(getNomeCidade().equals(cidade.getNomeCidade())))
+		if (!(getNome().equals(cidade.getNome())))
 			return false;
 
 		return true;
@@ -91,8 +95,8 @@ public class Cidade {
 		for (int i = 0; i < habitantes.size(); i++) {
 			habitante = habitantes.get(i);
 			totalArrecadado += habitante.calcularImposto();
-
 		}
+		
 		return totalArrecadado;
 	}
 

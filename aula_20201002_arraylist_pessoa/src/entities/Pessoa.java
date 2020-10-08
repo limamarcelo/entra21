@@ -1,0 +1,64 @@
+package entities;
+
+public class Pessoa implements Comparable<Pessoa>{
+
+	private String nome;
+	private Integer idade;
+
+	public Pessoa() {
+	}
+
+	public Pessoa(String nome, Integer idade) {
+		this.nome = nome;
+		this.idade = idade;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public Integer getIdade() {
+		return this.idade;
+	}
+
+	public void setIdade(Integer idade) {
+		this.idade = idade;
+	}
+	
+	public boolean equals(Object objeto) {
+
+		if (this == objeto)
+			return true;
+
+		if (objeto == null)
+			return false;
+
+		// this.getClass() ou getClass tanto faz.
+		if (getClass() != objeto.getClass())
+			return false;
+
+		Pessoa pessoa = (Pessoa) objeto;
+		// abaixo não dá para comparar com != o cpf pois o pessoa.getCpf() é do tipo
+		// PessoaFisica e o outro uma String não do tipo primitivo então tem que
+		// comparar utilizando o equals
+		if (!(getNome().equals(pessoa.getNome()) || !(getIdade().equals(pessoa.getIdade()))))
+			return false;
+
+		return true;
+	}
+	
+	@Override
+	public int compareTo(Pessoa pessoa) {
+		
+		if (this.getIdade() <pessoa.getIdade())
+		return -1;
+		
+		if(this.getIdade()>pessoa.getIdade())
+			return 1;		
+		return 0;
+	}
+}

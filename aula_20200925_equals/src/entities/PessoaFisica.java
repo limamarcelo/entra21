@@ -31,16 +31,15 @@ public class PessoaFisica extends Pessoa {
 			return false;
 
 		PessoaFisica pessoa = (PessoaFisica) objeto;
-
-		// abaixo não dá para comparar com != o cnpj pois o pessoa.getCnpj() é do tipo
-		// PessoaJuridica e o outro uma String não do tipo primitivo então tem que
+		// abaixo não dá para comparar com != o cpf pois o pessoa.getCpf() é do tipo
+		// PessoaFisica e o outro uma String não do tipo primitivo então tem que
 		// comparar utilizando o equals
-		if (getProvento() != pessoa.getProvento() || !(getCpf().equals(pessoa.getCpf())))
+		if (getProvento() != pessoa.getProvento() || !(getCpf().equals(pessoa.getCpf()) || !(getNome().equals(pessoa.getNome()))))
 			return false;
 
 		return true;
 	}
-
+	
 	@Override
 	public double calcularImposto() {
 		return getProvento() * 0.02;
