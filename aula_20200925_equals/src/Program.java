@@ -13,18 +13,11 @@ public class Program {
 	public static void main(String[] args) {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
-		System.out.print("*");
-		 System.out.print("***");
-		 System.out.print("*****");
-		 System.out.print("****");
-		 System.out.println("**");
-		
-		
-		/*
+
 		System.out.println("----------------");
 		System.out.println("Pessoas");
 		
-		ArrayList<Pessoa> pessoas = new ArrayList<>();
+		ArrayList<Pessoa> pessoas = new ArrayList<Pessoa>();
 	
 		Pessoa pessoa = null;
 		
@@ -102,7 +95,6 @@ public class Program {
 
 		System.out.println(paises.size());
 		System.out.println(paises);
-		*/
 		
 		sc.close();
 	}

@@ -4,12 +4,7 @@ import java.util.Locale;
 import java.util.Scanner;
 
 import entities.FiguraGeometrica;
-import entities.Paralelograma;
 import entities.Quadrado;
-import entities.Quadrilatero;
-import entities.Retangulo;
-import entities.TrapezioEscaleno;
-import entities.TrapezioIsosceles;
 
 public class Principal {
 

@@ -18,4 +18,14 @@
 			<item value=""/>
 		</list>
 	</section>
+	<section name="SmartImportWizard">
+		<item key="SmartImportRootWizardPage.STORE_HIDE_ALREADY_OPEN" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_CLOSE_IMPORTED" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
+		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
+		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\miran\OneDrive\Curso Entra21\JAVA WEB\exemplo_26_10_20(dao)\Aula261020"/>
+			<item value="C:\Users\miran\OneDrive\Curso Entra21\JAVA WEB\exemplo_15_10_20(serializable)\Aula151020"/>
+		</list>
+	</section>
 </section>

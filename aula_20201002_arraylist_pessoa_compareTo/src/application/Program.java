@@ -56,7 +56,7 @@ public class Program {
 		System.out.println();
 		System.out.println("Relação do cadastro de pessoas:");		
 		for (Pessoa x : pessoas) {
-			System.out.println("Nome: " + x.getNome() + ", Idade :"+ x.getIdade());
+			System.out.println("Nome: " + x.getNome() + ", Idade: "+ x.getIdade());
 		}	
 
 		sc.close();

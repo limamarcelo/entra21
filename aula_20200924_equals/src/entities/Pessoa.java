@@ -4,11 +4,11 @@ public abstract class Pessoa {
 
 	private String nome;
 	private double provento;
-	
+
 	public Pessoa() {
-		
+
 	}
-	
+
 	public Pessoa(String nome, double provento) {
 		this.nome = nome;
 		this.provento = provento;
@@ -29,13 +29,35 @@ public abstract class Pessoa {
 	public void setProvento(double provento) {
 		this.provento = provento;
 	}
-	
+
 	public abstract double calcularImposto();
-	
+
 	public String toString() {
-		return 	nome
-				+", Provento: "
-				+ provento; 
+		return nome + ", Provento: " + provento;
 	}
-	
+
+	public boolean equals(Object objeto) {
+
+		if (this == objeto)
+			return true;
+
+		if (objeto == null)
+			return false;
+
+		// this.getClass() ou getClass tanto faz.
+		if (getClass() != objeto.getClass())
+			return false;
+
+		Pessoa pessoa = (Pessoa) objeto;
+
+		// Abaixo não dá para comparar com != o cnpj pois o pessoa.getCnpj() é do tipo
+		// PessoaJuridica e o outro uma String não do tipo primitivo então tem que
+		// comparar String utilizando o equals
+		// comparar tipo primitivo utilizando o ==
+
+		if (!(getNome().equals(pessoa.getNome())) && !(getProvento() == (pessoa.getProvento())))
+			return false;
+
+		return true;
+	}
 }

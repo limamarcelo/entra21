@@ -7,14 +7,10 @@ public class Cidade {
 
 	private String nome;
 	private ArrayList<Pessoa> habitantes;
-	private ArrayList<Estado> estados;
-	private ArrayList<Pais> paises;
 
 	public Cidade(String nome) {
 		setNome(nome);
 		habitantes = new ArrayList<Pessoa>();
-		estados = new ArrayList<Estado>();
-		paises = new ArrayList<Pais>();
 	}
 
 	public String getNome() {
@@ -54,15 +50,6 @@ public class Cidade {
 	 * public void removePessoa(Pessoa habitantes) {
 	 * this.habitantes.remove(habitantes); }
 	 */
-
-	public List<Estado> getEstado() {
-		return estados;
-	}
-
-	public List<Pais> getPais() {
-		return paises;
-	}
-
 	
 	public boolean equals(Object objeto) {
 
@@ -78,12 +65,13 @@ public class Cidade {
 
 		Cidade cidade = (Cidade) objeto;
 
-		// Abaixo não dá para comparar com != o cnpj pois o pessoa.getCnpj() é do tipo
-		// PessoaJuridica e o outro uma String não do tipo primitivo então tem que
-		// comparar utilizando o equals
-		if (!(getNome().equals(cidade.getNome())))
+		// comparar utilizando o equals - comparando nome e quantidade de habitantes
+		if (!(getNome().equals(cidade.getNome())) && !(this.quantidadeHabitante() != cidade.quantidadeHabitante()))
 			return false;
-
+		//montar comparação equals para verificar se as cidades tem cidadãos com os nomes iguais.
+		//habitantes.equals.habitante
+		//for (int i=0; i <= cidade. )
+		
 		return true;
 	}
 

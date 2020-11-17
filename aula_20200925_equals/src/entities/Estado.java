@@ -37,8 +37,8 @@ public class Estado {
 	}
 	
 	public void adicionarHabitante(Cidade cidade, Pessoa habitante) {
-		int indice = cidade.indexOf(cidade);
-		cidade.get(indice).adicionarHabitante(habitante);
+		int indice = cidades.indexOf(cidade);
+		cidades.get(indice).adicionarHabitante(habitante);
 	}
 	
 	public void mudarHabitante(Cidade origem, Cidade destino, Pessoa habitante) {
@@ -60,8 +60,6 @@ public class Estado {
 
 		Estado estado = (Estado) objeto;
 
-		// abaixo não dá para comparar com != o cnpj pois o pessoa.getCnpj() é do tipo
-		// PessoaJuridica e o outro uma String não do tipo primitivo então tem que
 		// comparar utilizando o equals
 		if (!(getNome().equals(estado.getNome())))
 			return false;

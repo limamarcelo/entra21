@@ -50,8 +50,6 @@ public class Pais {
 
 		Pais pais = (Pais) objeto;
 
-		// abaixo não dá para comparar com != o cnpj pois o pessoa.getCnpj() é do tipo
-		// PessoaJuridica e o outro uma String não do tipo primitivo então tem que
 		// comparar utilizando o equals
 		if (!(getNome().equals(pais.getNome())))
 			return false;

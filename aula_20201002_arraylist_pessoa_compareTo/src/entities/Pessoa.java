@@ -55,7 +55,7 @@ public class Pessoa implements Comparable<Pessoa> {
 		if (this.getIdade() < pessoa.getIdade())
 			return -1;
 
-		if (this.getIdade() < pessoa.getIdade())
+		if (this.getIdade() > pessoa.getIdade())
 			return 1;
 		return 0;
 	}

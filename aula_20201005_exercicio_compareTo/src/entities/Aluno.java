@@ -6,12 +6,12 @@ public class Aluno {
 
 	private String nome;
 	private float idade;
-	private ArrayList<Aluno> notas = new ArrayList<>();
+	private ArrayList<Float> notas = new ArrayList<Float>();
 
 	public Aluno() {
 	}
 
-	public Aluno(String nome, float idade, ArrayList<Aluno> nota) {
+	public Aluno(String nome, float idade, ArrayList<Float> nota) {
 		this.nome = nome;
 		this.idade = idade;
 		this.notas = nota;
@@ -33,33 +33,30 @@ public class Aluno {
 		this.idade = idade;
 	}
 
-	public ArrayList<Aluno> getNota() {
+	public ArrayList<Float> getNota() {
 		return this.notas;
 	}
 
-	public void addNota(Aluno nota) {
+	public void addNota(Float nota) {
 		this.notas.add(nota);
 	}
 
-	public void removeNota(Aluno nota) {
+	public void removeNota(Float nota) {
 		this.notas.remove(nota);
 	}
 
 	/*
 	 * public String toString(int j) { return "Nome do aluno " + nome + ", idade " +
-	 * idade + ", notas"; } 
-	 * }
+	 * idade + ", notas"; } }
 	 */
 
-	@Override
-	public int compareTo(Pessoa pessoa) {
+	public float media() {
+		float sum = 0;
 
-		if (this.getMedia() < pessoa.getMedia())
-			return -1;
-
-		if (this.getNome().compareTo(nome) < pessoa.compareTo(pessoa) && this.getIdade() > pessoa.getIdade())
-			return 1;
-		return 0;
+		for (int i = 0; i < notas.size(); i++) {
+			float nota = notas.get(i);
+			sum += nota;
+		}
+		return sum / notas.size();
 	}
-
 }

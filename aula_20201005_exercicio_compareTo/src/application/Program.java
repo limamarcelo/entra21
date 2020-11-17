@@ -1,11 +1,9 @@
 package application;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Scanner;
 
 import entities.Aluno;
-import entities.Nota;
 
 public class Program {
 
@@ -15,7 +13,7 @@ public class Program {
 
 		Scanner sc = new Scanner(System.in);
 		ArrayList<Aluno> alunos = new ArrayList<>();
-		ArrayList<Nota> notas = new ArrayList<>();
+		ArrayList<Aluno> notas = new ArrayList<>();
 		System.out.print("Quantos alunos você deseja cadastrar? ");
 		int n = sc.nextInt();
 		System.out.print("Quantas notas você deseja cadastrar para cada aluno: ");
@@ -33,7 +31,7 @@ public class Program {
 				float nota = sc.nextFloat();
 				notas.add(nota);
 			}
-			Aluno aluno = new Aluno(nome, idade, new ArrayList<Aluno>(nota));
+			Aluno aluno = new Aluno(nome, idade, nota);
 			alunos.add(aluno);
 
 		}
@@ -42,7 +40,7 @@ public class Program {
 			for (int i = 0; i <= alunos.size(); i++) {
 
 				System.out.println("Nome do aluno" + x.getNome() + ", idade " + x.getIdade() + ", notas "
-						+ (x.getNota().get(i).getNota()));
+						+ (x.media()));
 			}
 		}
 		sc.close();

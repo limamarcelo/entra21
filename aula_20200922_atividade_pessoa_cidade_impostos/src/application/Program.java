@@ -24,17 +24,17 @@ public class Program {
 
 		//abaixo adicionando habitante com o método boolean
 		if (cidade.adicionarHabitante(pessoa)) {
-			System.out.println("Pessoa adiocionada com sucesso.");
+			System.out.println("Pessoa adicionada com sucesso.");
 		}
 
 		pessoa = new PessoaFisica("Maria", 1200.00);
 		if (cidade.adicionarHabitante(pessoa)) {
-			System.out.println("Pessoa adiocionada com sucesso.");
+			System.out.println("Pessoa adicionada com sucesso.");
 		}
 
 		pessoa = new PessoaJuridica("SENAI", 10000.00);
 		if (cidade.adicionarHabitante(pessoa)) {
-			System.out.println("Pessoa adiocionada com sucesso.");
+			System.out.println("Pessoa adicionada com sucesso.");
 		}
 
 		System.out.println("A arrecadação da cidade foi de: " + cidade.calcularArrecadacao());

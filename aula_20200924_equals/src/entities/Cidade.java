@@ -1,60 +1,71 @@
 package entities;
 
 import java.util.ArrayList;
-import java.util.List;
+
 
 public class Cidade {
 
 	private ArrayList<Pessoa> habitantes;
+	private String nome;
 
-	public Cidade() {
+	public Cidade(String nome) {
+		setNome(nome);
 		habitantes = new ArrayList<Pessoa>();
-
 	}
-	/*
-	 * public void adicionarHabitante (Pessoa habitante) {
-	 * habitantes.add(habitante);
-	 * 
-	 * }
-	 */
-
-	// inclui e retorna com valor de verdadeiro ou falso se conseguiu ou não
-	// incluir.
-	public boolean adicionarHabitante(Pessoa habitante) {
-		return habitantes.add(habitante);
-
+	
+	public String getNome() {
+		return nome;
 	}
 
-	public boolean removerHabitante(Pessoa habitante) {
-		return habitantes.remove(habitante);
-
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
-	public List<Pessoa> getPessoa() {
+	public ArrayList<Pessoa> getPessoas() {
 		return habitantes;
 	}
 
-	public void addPessoa(Pessoa habitantes) {
-		this.habitantes.add(habitantes);
+	public void addPessoa(Pessoa habitante) {
+		this.habitantes.add(habitante);
 	}
 
-	public void removePessoa(Pessoa habitantes) {
-		this.habitantes.remove(habitantes);
+	public void removePessoa(Pessoa habitante) {
+		this.habitantes.remove(habitante);
 	}
 
-	
 	public double calcularArrecadacao() {
 
 		double totalArrecadado = 0;
 		Pessoa habitante = null;
 
 		for (int i = 0; i < habitantes.size(); i++) {
-			habitante = habitantes.get(i);			
+			habitante = habitantes.get(i);
 			totalArrecadado += habitante.calcularImposto();
-			
 		}
 
 		return totalArrecadado;
 	}
 
+	public boolean equals(Object objeto) {
+
+		if (this == objeto)
+			return true;
+
+		if (objeto == null)
+			return false;
+
+		// this.getClass() ou getClass tanto faz.
+		if (getClass() != objeto.getClass())
+			return false;
+
+		Cidade cidade = (Cidade) objeto;
+
+		// Abaixo não dá para comparar com != o cnpj pois o pessoa.getCnpj() é do tipo
+		// PessoaJuridica e o outro uma String não do tipo primitivo então tem que
+		// comparar utilizando o equals
+		if (!(getNome().equals(cidade.getNome())))
+			return false;
+
+		return true;
+	}
 }
