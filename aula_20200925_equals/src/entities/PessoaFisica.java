@@ -4,7 +4,7 @@ public class PessoaFisica extends Pessoa {
 
 	private String cpf;
 
-	public PessoaFisica(String nome, double provento, String cpf, Estado estado) {
+	public PessoaFisica(String nome, double provento, String cpf, Cidade cidade) {
 		super(nome, provento);
 		setCpf(cpf);
 		

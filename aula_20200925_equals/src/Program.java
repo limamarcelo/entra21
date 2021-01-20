@@ -21,15 +21,15 @@ public class Program {
 	
 		Pessoa pessoa = null;
 		
-		pessoa = new PessoaFisica("Maria", 1000.00, "015.015.015-015");
+		pessoa = new PessoaFisica("Maria", 1000.00, "015.015.015-015", "Blumenau");
 		pessoas.add(pessoa);
-		pessoa = new PessoaFisica("João", 1500.00, "016.016.016-16");
+		pessoa = new PessoaFisica("João", 1500.00, "016.016.016-16", "Blumenau");
 		pessoas.add(pessoa);
 		
 		System.out.println(pessoas.size());
 		System.out.println(pessoas);
 		
-		pessoa = new PessoaFisica("João", 1500.00, "016.016.016-16");
+		pessoa = new PessoaFisica("João", 1500.00, "016.016.016-16", "Blumenau");
 		pessoas.remove(pessoa);
 
 		System.out.println(pessoas.size());

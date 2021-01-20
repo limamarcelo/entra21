@@ -4,7 +4,7 @@ public class PessoaJuridica extends Pessoa {
 
 	private String cnpj;
 
-	public PessoaJuridica(String nome, double provento, String cnpj) {
+	public PessoaJuridica(String nome, double provento, String cnpj, Cidade cidade) {
 		super(nome, provento);
 		setCnpj(cnpj);
 	}
