@@ -48,7 +48,7 @@ public class Principal {
 				System.out.println("Informe a idade do cliente:");
 				int idade = Integer.parseInt(leitor.next());
 
-				System.out.println("Informe a dÃ­vida do cliente:");
+				System.out.println("Informe a dívida do cliente:");
 				double divida = Double.parseDouble(leitor.next());
 				
 				System.out.print("\n");
@@ -63,7 +63,7 @@ public class Principal {
 				System.out.println("0 - Listar Clientes pelo Nome.");
 				System.out.println("1 - Listar Clientes pelo CPF.");
 				System.out.println("2 - Listar Clientes pela Idade.");
-				System.out.println("3 - Listar Clientes pela DÃ­vida.");
+				System.out.println("3 - Listar Clientes pela Dívida.");
 
 				Atributo atributo = Atributo.values()[Integer.parseInt(leitor.next())];
 
@@ -169,7 +169,7 @@ public class Principal {
 			System.out.println("Nome: " + cliente.getNome());
 			System.out.println("CPF: " + cliente.getCpf());
 			System.out.println("Idade: " + cliente.getIdade());
-			System.out.println("DÃ­vida: " + cliente.getDivida());
+			System.out.println("Dívida: " + cliente.getDivida());
 			System.out.print("\n");
 		}
 	}
