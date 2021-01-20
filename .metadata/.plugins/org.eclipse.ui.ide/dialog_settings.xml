@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="NewWizardAction">
-		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.jdt.ui.wizards.JavaProjectWizard"/>
+		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.m2e.core.wizards.Maven2ProjectWizard"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.m2e"/>
 		</list>
 	</section>
 	<section name="ExternalProjectImportWizard">
@@ -12,6 +13,7 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\miran\OneDrive\Curso Entra21\JAVA WEB\Projeto Final\Projeto Eclipse Maven\partes colegas\NotAnnotatedClasses\NotAnnotatedClasses"/>
 			<item value="C:\Users\miran\OneDrive\Projetos Eclipse\ws-entra21"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
@@ -24,6 +26,15 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\miran\OneDrive\Curso Entra21\JAVA WEB\Atividades Avaliativas\Atividade 03 - Gestão de Alunos\SchoolManagement"/>
+			<item value="C:\Users\miran\OneDrive\Curso Entra21\JAVA WEB\Aula_20201201_exemplo_professor_hibernate"/>
+			<item value="C:\Users\miran\OneDrive\Curso Entra21\JAVA WEB\Aula151220"/>
+			<item value="C:\Users\miran\OneDrive\Curso Entra21\JAVA WEB\Aula141220"/>
+			<item value="C:\Users\miran\OneDrive\Curso Entra21\JAVA WEB\aula_11_12_20\Aula101220"/>
+			<item value="C:\Users\miran\OneDrive\Curso Entra21\JAVA WEB\exemplo_10_12_20(hibernate)\Aula_20201210"/>
+			<item value="C:\Users\miran\OneDrive\Curso Entra21\JAVA WEB\exemplo_10_12_20(hibernate)"/>
+			<item value="C:\Users\miran\OneDrive\Curso Entra21\JAVA WEB\exemplo_10_12_20(hibernate)\Aula101220"/>
+			<item value="C:\Users\miran\OneDrive\Projetos Eclipse\ws-entra21\class_20201117_CRUD"/>
 			<item value="C:\Users\miran\OneDrive\Curso Entra21\JAVA WEB\exemplo_26_10_20(dao)\Aula261020"/>
 			<item value="C:\Users\miran\OneDrive\Curso Entra21\JAVA WEB\exemplo_15_10_20(serializable)\Aula151020"/>
 		</list>
